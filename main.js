@@ -25,7 +25,7 @@ $(document).ready(function(){
         
     });
     
-    $('#backToHome').click(function() {
+    $('#backButton').click(function() {
      
         // Hide current page
         $(currPage).slideUp(500);
