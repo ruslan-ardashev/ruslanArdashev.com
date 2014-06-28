@@ -288,21 +288,165 @@
             </dl>
             
             <h3>Understanding the Coding Assignment</h3>
-            <ul>
-                <li>
-                    <p>
-                        Before even getting started, get a better C editor. For mac users, 
-                        get the latest xCode (includes gcc), and download 
-                        <a href="http://www.sublimetext.com" target="_blank">Sublime</a>. 
-                        Using this is much easier than compiling via connecting to the 
-                        Teer machines and will make editting and debugging much easier.
-                    </p>
-                    <p> How to connect to CIFS and edit that way. [Implement. Fix this.] </p>
-                </li>
-                
-                
-            </ul>
             
+            <p>
+                Before even getting started, get a better C editor. For mac users, 
+                get the latest xCode (includes gcc), and download 
+                <a href="http://www.sublimetext.com" target="_blank">Sublime</a>. 
+                Using this is much easier than compiling via connecting to the 
+                Teer machines and will make editting and debugging much easier.
+            </p>
+        
+            <p> How to connect to CIFS and edit that way. [Coming soon.] </p>
+            
+            <p>
+                To get started on this homework's coding assignment, first get a little comfortable with C if you aren't already --
+                you will need to be for the midterms and final. Don't go crazy with worrying, but you should be familiar with a simple
+                data structure, the &quot;struct&quot; (more on that later), pointers, and how dynamic memory allocation is done.
+                <br></br>
+                Below are some getting-started tutorials. These should help with the preliminary coding problems and with 
+                getting started with C:
+            </p>
+            
+            <dl class="dl-horizontal">
+                
+                <dt>
+                    <a href="http://www.cprogramming.com/tutorial/c-tutorial.html" blank="_target">Link</a>
+                </dt>
+                
+                <dd>C Fundamentals</dd> 
+                
+                <dt>
+                    <a href="http://www.lysator.liu.se/c/bwk-tutor.html" blank="_target">Link</a>
+                </dt>
+                
+                <dd>Programming in C:  A Tutorial</dd> 
+                
+            </dl>
+            
+            <p>
+                First and foremost, you need to learn how to read from the text file provided. 
+                The code below is provided as a reference for reading off lines in C. 
+            </p>
+            
+            <!--Insert code here.-->
+            <div style="width:75%; margin-left: auto; margin-right: auto;">
+                <pre class="pre-scrollable"> 
+
+C - Reading from a Text File
+
+/*
+** File FILE_3.C
+**
+** Illustrates how to read from a file.
+**
+** The file is opened for reading.  Each line is successively fetched
+** using fgets command.  The string is then converted to a long integer.
+**
+** Note that fgets returns NULL when there are no more lines in the file.
+**
+** In this example file ELAPSED.DTA consists of various elapsed times in
+** seconds.  This may have been the result of logging the time  of events
+** using an elapsed time counter which increments each second from the
+** time the data logger was placed in service.
+**
+** Typical data in elapsed.dta might be;
+**
+** 65
+** 142
+** 1045
+** 60493
+** 124567
+**
+**
+** Peter H. Anderson, 4 April, '97
+*/
+
+#include &lt;stdio.h&gt;        /* required for file operations */
+#include &lt;onio.h&gt;         /* for clrscr */
+#include &lt;dos.h&gt;          /* for delay */
+
+FILE *fr;                       /* declare the file pointer */
+
+main()
+
+{
+   int n;
+   long elapsed_seconds;
+   char line[80];
+   clrscr();
+
+   fr = fopen (&quot;elapsed.dta&quot;, &quot;rt&quot;);      
+   // open the file for reading 
+   // elapsed.dta is the name of the file 
+   // &quot;rt&quot; means open the file for reading text
+
+   while(fgets(line, 80, fr) != NULL)
+   {
+     /* get a line, up to 80 chars from fr.  done if NULL */
+     sscanf (line, &quot;%ld&quot;, &amp;elapsed_seconds);
+     /* convert the string to a long int */
+     printf (&quot;%ld\n&quot;, elapsed_seconds);
+   }
+   fclose(fr);  /* close the file prior to exiting the routine */
+}               /*of main*/
+
+                </pre>
+            </div>
+                
+            <p>
+                Courtesy of 
+                    <a href="http://www.phanderson.com/files/file_read.html" target="_blank">
+				        http://www.phanderson.com/files/file_read.html
+                    </a>.
+            </p>
+            
+            <p>
+                Once we have read the file, you will need to dynamically allocate whatever data structure(s) 
+                you are using. Below is a great explanation on how to do this.
+            </p>
+            
+            <dl class="dl-horizontal"> 
+            
+                <dt>
+                    <a href="http://www.cplusplus.com/forum/articles/416/" blank="_target">
+                    Link
+                    </a>
+                </dt>
+                
+                <dd>Dynamic Memory Allocation</dd>
+            </dl>
+            
+            <p>
+                In general, if we have the line <code>newptr=(struct Node *) malloc(sizeof(Node));</code>, 
+                we cast it with <code>(struct Node *)</code> before writing <code>malloc(sizeof(Node))</code>. 
+                We do this because by default, malloc returns a void*, or a void pointer. 
+                We "cast" the malloc'd memory as, in this case, a struct pointer.
+            </p>
+            
+            <p>
+                On another note, you will need to contain your data. For this, C has a convenient data structure known as a &quot;struct.&quot;
+                Structs are essentially just pre-set "offsets." If you malloc a struct with an int, int, and a char[32] (a string with
+                maximum 32 chars), for example, the struct.int0 will be at 0, struct.int1 will be at 4 (on a 32 bit machine, since an
+                int is 4 bytes in size), and the char will span from 8 to 39 (since it begins at byte 8, and is 32 bytes in size, so it takes
+                8, 9, 10, ..., 38, 39, and the next data structure begins at 40).
+            </p>
+            
+            <dl class="dl-horizontal">
+                
+                <dt>
+                    <a href="http://www.cs.usfca.edu/~wolber/SoftwareDev/C/CStructs.htm" target="_blank">Link</a>
+                </dt>
+                
+                <dd>How to Create A Struct</dd>
+                
+            </dl>
+            
+            <p>
+                After dynamic allocation comes sorting. This portion draws heavily upon CS 201 knowledge and, aside from
+				some C vernacular, is left to 201 experience. One way of doing it by creating another identically sized 
+                data structure and placing results there as you sort.
+            </p>
             
         </div>
         

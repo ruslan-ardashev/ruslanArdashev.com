@@ -1,31 +1,41 @@
+@import url('http://getbootstrap.com/dist/css/bootstrap.css');
+
 body, html{
     width: 99.7%;
     font-family: Garamond, 'Garamond';
     color: #00519B;
     font-weight: bold;
 }
+
 h1,h2,h3,h4{
     padding-left: 0.25cm;
 }
+
 a{
     color: #00519B;
 }
+
 .mainTable{
     width:100%;
 }
+
 .w80{
     width:80%;
 }
+
 .w20{
     width:20%;
 }
+
 .center{
     text-align: center;       
 }
+
 .intro{
     color: #00519B;
     font-family: 'Garamond';
 }
+
 .separator{
     background-color: #00519B;
     width: 100%;
@@ -33,33 +43,46 @@ a{
     color: white;
     line-height: 0.05;
 }
+
 .icon{
     height: 60px;
     width: 60px;
 }
+
 .inline{
     display: inline;
 }
+
 .gmail{
     background-color: #ED0B0C;
     color: white;
 }
+
 .linked{
     background-color: #0598BA;
     color: white;
 }
+
 .face{
     background-color: #4B6DAA;
     color: white;
 }
+
 .text{
     vertical-align:text-top;
 }
+
 .noUL{
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
-p{
-    padding-right: 0.75cm;
+
+ .dl-horizontal dt {
+    text-align: left;
+    width: auto;
+    padding-right: 2em;
+}
+.dl-horizontal dd {
+    margin-left: 0;
 }
