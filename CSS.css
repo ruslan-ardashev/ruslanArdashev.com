@@ -43,3 +43,8 @@ a{
 .li {
     padding-left: 3em;
 }
+
+.centerIMG {
+	display: block;
+	margin: auto auto;
+}
