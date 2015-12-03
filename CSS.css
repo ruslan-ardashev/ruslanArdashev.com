@@ -1,0 +1,50 @@
+@import url('http://getbootstrap.com/dist/css/bootstrap.css');
+
+body, html{
+    font-family: Garamond, 'Garamond';
+    color: #00519B;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.header, .separator {
+    color: white;
+    background-color: #00519B;
+    padding-top: auto;
+    padding-bottom: auto;
+}
+
+.separator {
+    padding-left: 1em;
+}
+
+a{
+    color: #00519B;
+    text-decoration: underline;
+}
+
+.icon{
+    height: 70px;
+    width: 70px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+ .dl-horizontal dt {
+    text-align: left;
+    width: auto;
+    padding-right: 3em;
+}
+
+.dl-horizontal dd {
+    margin-left: 0;
+}
+
+.li {
+    padding-left: 3em;
+}
+
+.centerIMG {
+	display: block;
+	margin: auto auto;
+}
