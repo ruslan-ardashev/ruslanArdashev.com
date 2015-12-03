@@ -1,7 +1,7 @@
 ruslanArdashev.com
 ==========
 
-[v1 link (coming soon)](https://github.com/ruslan120101/ruslanArdashev.com/tree/v1)
+[v1](https://github.com/ruslan120101/ruslanArdashev.com/tree/v1)
 
 v1 image with "v1" overlay and hyperlink coming soon
 
