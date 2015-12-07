@@ -5,6 +5,8 @@ ruslanArdashev.com
 
 v1 image with "v1" overlay and hyperlink coming soon
 
-[v2](https://github.com/ruslan120101/ruslanArdashev.com/tree/v2)
+![alt_text](https://raw.githubusercontent.com/ruslan120101/ruslanArdashev.com/master/images/v2-example-contactSubPage.png)]
 
-v2 image with "v2" overlay and hyperlink coming soon
+* [GitHub](https://github.com/ruslan120101/ruslanArdashev.com/tree/v2)
+* [JSFiddle](http://jsfiddle.net/52pn3ewa/33)
+* [Live](www.ruslanArdashev.com)
