@@ -1,4 +1,5 @@
 ruslanArdashev.com v2
 ==========
 
-coming soon
+**Features**
+* Base64-encoded icon images in the "Content" subpage for efficiency
