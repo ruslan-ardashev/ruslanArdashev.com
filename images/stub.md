@@ -1,1 +1,0 @@
-to push images directory
