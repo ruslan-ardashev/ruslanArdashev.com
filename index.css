@@ -31,10 +31,16 @@ body {
   font-family: "Arial";
 }
 
+.contactLink {
+  text-decoration: none;
+  color: /*lightTan*/ 
+  #ede0c5;
+}
+
 .unstyledLink {
   text-decoration: none;
-  color: /*lightTan*/
-  #ede0c5;
+  color: /*darkerGold*/ 
+  #9e906d;
 }
 
 .left {
