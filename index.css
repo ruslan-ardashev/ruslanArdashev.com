@@ -60,7 +60,6 @@ body {
   #2a4557;
   color: /*lightTan*/
   #ede0c5;
-  text-indent: 5px;
   height: 100%;
 }
 
@@ -106,7 +105,7 @@ body {
 
 /* Contact Page */
 
-li {
+.contact {
   padding: 0.6em 0em 1em 1.5em;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
